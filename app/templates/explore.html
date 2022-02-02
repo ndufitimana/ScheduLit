@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+{% if courses %}
+    {% for course in courses %}  
+    <table class="table table-hover">
+        <tr>
+            <td width="70px">
+                <a href="{{ url_for('main.user', username=course.author.username) }}">
+                    <img src="{{ course.author.avatar(70) }}" />
+                </a>
+            </td>
+            <td>
+                <a href="{{ url_for('main.user', username=course.author.username) }}">
+                    {{ course.author.username }}
+                </a>
+                has:
+                <br>
+                {{ course.course }} scheduled!
+            </td>
+        </tr>
+    </table>
+
+    {% endfor %}
+{%else%}
+<h3>You have no followers!</h3>
+{%endif%}
+
+{% endblock %} 

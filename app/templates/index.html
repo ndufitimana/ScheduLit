@@ -1,0 +1,29 @@
+
+{% extends "base.html" %}
+
+{% block app_content %}
+
+
+<div class="d-flex p-2 justify-content-center">
+    <div class="card align-items-center" style="width: 45rem;">
+        <div class="card-block text-center align-items-center">
+          <h5 class="card-title" style="font-family: Verdana;"><strong>Today's Class Schedule</strong></h5>
+        </div>
+        <ul class="list-group list-group-flush w-100 align-items-stretch">
+
+          {%for course in courseList %}
+            <li onClick = "#addFunction" class="list-group-item text-left" d-inline-block mx-auto" style="background-color:lavender;
+            font-family: Verdana; cursor:pointer">
+              {{loop.index}}. {{course.course}}: {{course.building}}
+              <a href="{{ url_for('main.removeCourse', item = course.course)}} ">
+                <span class=" pull-right glyphicon glyphicon-trash"></span>
+              </a>
+            </li>
+          {%endfor%}
+          
+        </ul>
+      </div>
+</div>
+
+
+{% endblock %} 

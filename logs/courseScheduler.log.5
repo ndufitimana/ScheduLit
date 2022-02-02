@@ -1,0 +1,108 @@
+2022-01-22 11:54:30,960 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 11:54:54,087 ERROR: Exception on /add [POST] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/routes.py", line 63, in addCourse
+    form.building.data, timestamp = datetime_sqlalchemy(str(form.time.data)),
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/routes.py", line 50, in datetime_sqlalchemy
+    return datetime.strptime(value, '%I:%M %p')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '13:45:00' does not match format '%I:%M %p'
+2022-01-22 11:58:40,566 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 11:59:01,206 ERROR: Exception on /add [POST] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/routes.py", line 63, in addCourse
+    form.building.data, timestamp = datetime_sqlalchemy(str(form.time.data)),
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/routes.py", line 50, in datetime_sqlalchemy
+    return datetime.strftime(value, "%I:%M %p")
+TypeError: descriptor 'strftime' for 'datetime.date' objects doesn't apply to a 'str' object
+2022-01-22 11:59:50,869 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 12:00:10,830 ERROR: Exception on /add [POST] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/routes.py", line 63, in addCourse
+    form.building.data, timestamp = datetime_sqlalchemy(str(form.time.data)),
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/routes.py", line 50, in datetime_sqlalchemy
+    return datetime.strptime(value, "%I:%M %p")
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '12:34:00' does not match format '%I:%M %p'
+2022-01-22 12:01:51,019 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 12:02:09,597 ERROR: Exception on /add [POST] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/routes.py", line 63, in addCourse
+    form.building.data, timestamp = datetime_sqlalchemy(str(form.time.data)),
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/routes.py", line 50, in datetime_sqlalchemy
+    return datetime.strptime(value, "%I:%M")
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '22:30:00' does not match format '%I:%M'
+2022-01-22 12:03:25,551 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 12:04:05,595 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 12:07:25,048 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 12:07:48,870 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 12:08:33,687 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 12:09:40,594 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 12:10:39,433 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 12:12:38,889 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 12:13:23,706 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 12:15:08,881 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 12:17:02,147 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 12:18:04,514 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 12:25:09,654 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 12:26:58,881 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 12:30:29,951 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 12:31:33,858 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 12:32:04,216 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 14:44:31,452 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 14:47:19,953 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 21:13:11,623 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-30 11:18:13,004 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-30 11:18:51,157 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-30 11:22:30,457 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-30 11:22:40,742 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]

@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block app_content %}
+    <table class="table table-hover">
+        <tr>
+            <td width="256px"><img src="{{ user.avatar(256) }}"></td>
+            <td>
+                <h1>User: {{ user.last_name}}, {{user.first_name }}</h1>
+                <h3>Username: {{user.username}}</h3>
+                {% if user.about_me %}<p>{{ user.about_me }}</p>{% endif %}
+                {% if user.last_seen %}<p>Last seen on: {{ moment(user.last_seen).format('LLL') }}</p>{% endif %}
+                <p>{{ user.followers.count() }} followers, {{ user.followed.count() }} following.</p>
+                {% if user == current_user %}
+                <p><a href="{{ url_for('main.edit_profile') }}">Edit your profile</a></p>
+                {% elif not current_user.is_following(user) %}
+                <p>
+                    <form action="{{ url_for('main.follow', username=user.username) }}" method="post">
+                        {{ form.hidden_tag() }}
+                        {{ form.submit(value='Follow') }}
+                    </form>
+                </p>
+                {% else %}
+                <p>
+                    <form action="{{ url_for('main.unfollow', username=user.username) }}" method="post">
+                        {{ form.hidden_tag() }}
+                        {{ form.submit(value='Unfollow') }}
+                    </form>
+                </p>
+                {% endif %}
+                <p style="color: red;"><a href="{{ url_for('main.deleteProfile', id = current_user.id) }}">Delete your profile</a></p>
+
+            </td>
+        </tr>
+    </table>
+    <hr>
+    <h3> Your Courses </h3>
+    {%if courses %}
+    {%for course in courses %}
+    <table class="table table-hover">
+                <td><img src ="{{course.author.avatar(36)}}">Course: {{course.course}}</td>
+    </table>
+    {%endfor%}
+    {%else%}
+    <p>There are not scheduled courses in your Schedulit</p>
+    {%endif%}
+{%endblock%}

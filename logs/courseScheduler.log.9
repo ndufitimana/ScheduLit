@@ -1,0 +1,121 @@
+2022-01-16 15:29:19,490 ERROR: Exception on / [GET] [in /Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/ndufitimana/Desktop/myapp/app/routes.py", line 47, in scheduleView
+    return render_template('index.html', title = 'Home',  courseList = courseList)
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/loaders.py", line 127, in load
+    code = environment.compile(source, name, filename)
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/environment.py", line 638, in compile
+    self.handle_exception(source=source_hint)
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/ndufitimana/Desktop/myapp/app/templates/index.html", line 17, in template
+    <a href="{{ url_for('removeCourse'), item = course.course}}">
+jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
+2022-01-16 15:30:25,465 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 15:30:32,552 ERROR: Exception on / [GET] [in /Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/ndufitimana/Desktop/myapp/app/routes.py", line 47, in scheduleView
+    return render_template('index.html', title = 'Home',  courseList = courseList)
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/templating.py", line 137, in render_template
+    return _render(
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/templating.py", line 120, in _render
+    rv = template.render(context)
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1090, in render
+    self.environment.handle_exception()
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/environment.py", line 832, in handle_exception
+    reraise(*rewrite_traceback_stack(source=source))
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/_compat.py", line 28, in reraise
+    raise value.with_traceback(tb)
+  File "/Users/ndufitimana/Desktop/myapp/app/templates/index.html", line 2, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/ndufitimana/Desktop/myapp/app/templates/base.html", line 1, in top-level template code
+    {%extends "bootstrap/base.html"%}
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
+    {%- block html %}
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
+    {% block body -%}
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
+    {% block content -%}
+  File "/Users/ndufitimana/Desktop/myapp/app/templates/base.html", line 51, in block "content"
+    {% block app_content %}{% endblock %}
+  File "/Users/ndufitimana/Desktop/myapp/app/templates/index.html", line 17, in block "app_content"
+    <a href="{{ url_for('removeCourse', item = course.course)}} ">
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/helpers.py", line 370, in url_for
+    return appctx.app.handle_url_build_error(error, endpoint, values)
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 2216, in handle_url_build_error
+    reraise(exc_type, exc_value, tb)
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/helpers.py", line 357, in url_for
+    rv = url_adapter.build(
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/werkzeug/routing.py", line 2179, in build
+    raise BuildError(endpoint, values, method, self)
+werkzeug.routing.BuildError: Could not build url for endpoint 'removeCourse' with values ['item']. Did you mean 'addCourse' instead?
+2022-01-16 15:35:37,731 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 15:35:48,864 ERROR: Exception on /removeCourse/Economics [GET] [in /Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py:1891]
+Traceback (most recent call last):
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/ndufitimana/Desktop/myapp/app/routes.py", line 212, in removeCourse
+    to_remove = Course.query.filter_by(item).first()
+TypeError: filter_by() takes 1 positional argument but 2 were given
+2022-01-16 15:36:16,549 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 15:39:24,635 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 15:43:09,964 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 15:46:55,186 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 15:48:04,566 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 15:49:38,818 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 15:51:20,899 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 15:53:31,915 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 15:57:32,496 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 15:58:29,231 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
