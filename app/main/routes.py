@@ -30,7 +30,7 @@ def before_request():
         db.session.commit()
 
 @bp.route('/', methods = ['GET', 'POST'])
-@bp.route('/home', methods = ['GET', 'POST'])
+@bp.route('/index', methods = ['GET', 'POST'])
 @login_required 
 def scheduleView():
     """ 
