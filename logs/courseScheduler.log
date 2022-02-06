@@ -99,3 +99,4 @@ Traceback (most recent call last):
 TypeError: filter_by() takes 1 positional argument but 2 were given
 2022-02-06 10:59:24,948 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:76]
 2022-02-06 11:16:54,661 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:76]
+2022-02-06 15:04:24,979 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:76]
