@@ -40,3 +40,6 @@ visitor==0.1.3
 Werkzeug==2.0.2
 WTForms==3.0.1
 WTForms-Components==0.10.5
+#for heroku
+psycopg2==2.9.1
+gunicorn==20.1.0
