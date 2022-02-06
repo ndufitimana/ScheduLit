@@ -1,46 +1,4 @@
-2022-01-30 11:24:08,624 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
-2022-01-30 11:24:26,735 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
-2022-01-30 11:59:12,238 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
-2022-01-30 12:02:41,581 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
-2022-01-30 12:29:51,904 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
-2022-01-30 17:44:02,868 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
-2022-01-30 17:45:33,627 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
-2022-01-30 18:13:23,345 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
-2022-01-30 18:13:33,958 ERROR: Exception on /user/nelson [GET] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1457]
-Traceback (most recent call last):
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
-    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/ndufitimana/Desktop/ScheduLit/app/routes.py", line 135, in user
-    return render_template('user.html', user=user, courses = courses, form =form)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/templating.py", line 148, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1068, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 997, in get_template
-    return self._load_template(name, globals)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 958, in _load_template
-    template = self.loader.load(self, name, self.make_globals(globals))
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/loaders.py", line 137, in load
-    code = environment.compile(source, name, filename)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 757, in compile
-    self.handle_exception(source=source_hint)
-  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 925, in handle_exception
-    raise rewrite_traceback_stack(source=source)
-  File "/Users/ndufitimana/Desktop/ScheduLit/app/templates/user.html", line 30, in template
-    {% endif %}
-jinja2.exceptions.TemplateSyntaxError: Encountered unknown tag 'endif'. Jinja was looking for the following tags: 'endblock'. The innermost block that needs to be closed is 'block'.
-2022-01-30 18:14:56,433 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
-2022-01-31 13:39:59,308 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
-2022-01-31 13:42:08,999 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
-2022-01-31 13:45:03,311 ERROR: Exception on /explore [GET] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1457]
+2022-01-31 13:45:39,823 ERROR: Exception on /explore [GET] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1457]
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
@@ -76,9 +34,57 @@ Traceback (most recent call last):
     {% block content -%}
   File "/Users/ndufitimana/Desktop/ScheduLit/app/templates/base.html", line 52, in block 'content'
     {% block app_content %}{% endblock %}
-  File "/Users/ndufitimana/Desktop/ScheduLit/app/templates/explore.html", line 8, in block 'app_content'
-    <td><img src="{{ post.author.avatar(36) }}"></td>
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/templates/explore.html", line 10, in block 'app_content'
+    <a href="{{ url_for('user', username=courses.author.username) }}">
   File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 474, in getattr
     return getattr(obj, attribute)
-jinja2.exceptions.UndefinedError: 'post' is undefined
-2022-01-31 13:45:32,208 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+jinja2.exceptions.UndefinedError: 'list object' has no attribute 'author'
+2022-01-31 13:46:37,985 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-31 13:46:46,581 ERROR: Exception on /explore [GET] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/routes.py", line 264, in explore
+    return render_template('explore.html', title='Explore', courses=followerCourses)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/templating.py", line 147, in render_template
+    return _render(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/templating.py", line 128, in _render
+    rv = template.render(context)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 1291, in render
+    self.environment.handle_exception()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 925, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/templates/explore.html", line 1, in top-level template code
+    {% extends "base.html" %}
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/templates/base.html", line 1, in top-level template code
+    {%extends "bootstrap/base.html"%}
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block 'html'
+    {% block body -%}
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block 'body'
+    {% block content -%}
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/templates/base.html", line 52, in block 'content'
+    {% block app_content %}{% endblock %}
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/templates/explore.html", line 11, in block 'app_content'
+    {{ courses.author.username }}
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/jinja2/environment.py", line 474, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'list object' has no attribute 'author'
+2022-01-31 13:47:08,152 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-31 14:00:05,586 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-31 14:24:54,063 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:50]
+2022-01-31 14:43:58,525 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:50]
+2022-01-31 14:47:06,129 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:50]
+2022-01-31 14:50:13,014 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:50]
+2022-02-01 17:22:34,069 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:72]

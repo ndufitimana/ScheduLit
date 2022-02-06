@@ -1,4 +1,4 @@
-2022-01-22 11:40:18,224 ERROR: Exception on /add [POST] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1457]
+2022-01-22 11:42:51,471 ERROR: Exception on /add [POST] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1457]
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1702, in _execute_context
     context = constructor(
@@ -76,5 +76,44 @@ Traceback (most recent call last):
     raise TypeError(
 sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
 [SQL: INSERT INTO course (course, timestamp, building, user_id) VALUES (?, ?, ?, ?)]
-[parameters: [{'timestamp': datetime.time(23, 30), 'user_id': 1, 'building': 'SCI 101', 'course': 'Econo'}]]
-2022-01-22 11:42:21,621 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+[parameters: [{'user_id': 1, 'building': 'dddd', 'timestamp': datetime.time(13, 30), 'course': 'aaaa'}]]
+2022-01-22 11:48:55,051 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 11:49:20,341 ERROR: Exception on /add [POST] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/routes.py", line 63, in addCourse
+    form.building.data, timestamp = datetime_sqlalchemy(str(form.time.data)),
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/routes.py", line 50, in datetime_sqlalchemy
+    return datetime.datetime.strptime(value, '%H:%M %r')
+AttributeError: type object 'datetime.datetime' has no attribute 'datetime'
+2022-01-22 11:49:50,044 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 11:50:06,610 ERROR: Exception on /add [POST] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1457]
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/routes.py", line 63, in addCourse
+    form.building.data, timestamp = datetime_sqlalchemy(str(form.time.data)),
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/routes.py", line 50, in datetime_sqlalchemy
+    return datetime.strptime(value, '%H:%M %r')
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/_strptime.py", line 341, in _strptime
+    raise ValueError("'%s' is a bad directive in format '%s'" %
+ValueError: 'r' is a bad directive in format '%H:%M %r'

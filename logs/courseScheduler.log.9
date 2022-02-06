@@ -1,121 +1,92 @@
-2022-01-16 15:29:19,490 ERROR: Exception on / [GET] [in /Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py:1891]
+2022-01-16 15:59:05,671 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 16:02:09,263 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 16:02:19,792 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 16:03:49,001 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 16:04:30,248 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 16:12:58,458 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 16:13:32,915 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 18:08:24,685 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 18:11:10,803 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 18:18:48,030 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-16 18:20:22,634 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+2022-01-22 10:54:02,285 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 10:54:23,616 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 10:56:02,232 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 10:56:36,021 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 10:57:11,600 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+2022-01-22 10:57:58,394 ERROR: Exception on /add [POST] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1457]
 Traceback (most recent call last):
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1702, in _execute_context
+    context = constructor(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 1070, in _init_compiled
+    param = [
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 1071, in <listcomp>
+    processors[key](compiled_params[key])
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/dialects/sqlite/base.py", line 1003, in process
+    raise TypeError(
+TypeError: SQLite DateTime type only accepts Python datetime and date objects as input.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 2073, in wsgi_app
     response = self.full_dispatch_request()
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1518, in full_dispatch_request
     rv = self.handle_user_exception(e)
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1516, in full_dispatch_request
     rv = self.dispatch_request()
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py", line 1502, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**req.view_args)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
     return func(*args, **kwargs)
-  File "/Users/ndufitimana/Desktop/myapp/app/routes.py", line 47, in scheduleView
-    return render_template('index.html', title = 'Home',  courseList = courseList)
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/templating.py", line 138, in render_template
-    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/environment.py", line 930, in get_or_select_template
-    return self.get_template(template_name_or_list, parent, globals)
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/environment.py", line 883, in get_template
-    return self._load_template(name, self.make_globals(globals))
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/environment.py", line 857, in _load_template
-    template = self.loader.load(self, name, globals)
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/loaders.py", line 127, in load
-    code = environment.compile(source, name, filename)
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/environment.py", line 638, in compile
-    self.handle_exception(source=source_hint)
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/Users/ndufitimana/Desktop/myapp/app/templates/index.html", line 17, in template
-    <a href="{{ url_for('removeCourse'), item = course.course}}">
-jinja2.exceptions.TemplateSyntaxError: expected token 'end of print statement', got '='
-2022-01-16 15:30:25,465 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 15:30:32,552 ERROR: Exception on / [GET] [in /Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/ndufitimana/Desktop/myapp/app/routes.py", line 47, in scheduleView
-    return render_template('index.html', title = 'Home',  courseList = courseList)
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/templating.py", line 137, in render_template
-    return _render(
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/Users/ndufitimana/Desktop/myapp/app/templates/index.html", line 2, in top-level template code
-    {% extends "base.html" %}
-  File "/Users/ndufitimana/Desktop/myapp/app/templates/base.html", line 1, in top-level template code
-    {%extends "bootstrap/base.html"%}
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 1, in top-level template code
-    {% block doc -%}
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 4, in block "doc"
-    {%- block html %}
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 20, in block "html"
-    {% block body -%}
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask_bootstrap/templates/bootstrap/base.html", line 23, in block "body"
-    {% block content -%}
-  File "/Users/ndufitimana/Desktop/myapp/app/templates/base.html", line 51, in block "content"
-    {% block app_content %}{% endblock %}
-  File "/Users/ndufitimana/Desktop/myapp/app/templates/index.html", line 17, in block "app_content"
-    <a href="{{ url_for('removeCourse', item = course.course)}} ">
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/helpers.py", line 370, in url_for
-    return appctx.app.handle_url_build_error(error, endpoint, values)
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 2216, in handle_url_build_error
-    reraise(exc_type, exc_value, tb)
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/helpers.py", line 357, in url_for
-    rv = url_adapter.build(
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/werkzeug/routing.py", line 2179, in build
-    raise BuildError(endpoint, values, method, self)
-werkzeug.routing.BuildError: Could not build url for endpoint 'removeCourse' with values ['item']. Did you mean 'addCourse' instead?
-2022-01-16 15:35:37,731 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 15:35:48,864 ERROR: Exception on /removeCourse/Economics [GET] [in /Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py:1891]
-Traceback (most recent call last):
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 2447, in wsgi_app
-    response = self.full_dispatch_request()
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1952, in full_dispatch_request
-    rv = self.handle_user_exception(e)
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1821, in handle_user_exception
-    reraise(exc_type, exc_value, tb)
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/_compat.py", line 39, in reraise
-    raise value
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1950, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/Users/ndufitimana/Desktop/myapp/venv/lib/python3.9/site-packages/flask/app.py", line 1936, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/ndufitimana/Desktop/myapp/app/routes.py", line 212, in removeCourse
-    to_remove = Course.query.filter_by(item).first()
-TypeError: filter_by() takes 1 positional argument but 2 were given
-2022-01-16 15:36:16,549 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 15:39:24,635 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 15:43:09,964 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 15:46:55,186 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 15:48:04,566 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 15:49:38,818 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 15:51:20,899 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 15:53:31,915 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 15:57:32,496 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 15:58:29,231 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
+  File "/Users/ndufitimana/Desktop/ScheduLit/app/routes.py", line 63, in addCourse
+    db.session.commit()
+  File "<string>", line 2, in commit
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 1431, in commit
+    self._transaction.commit(_to_root=self.future)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 829, in commit
+    self._prepare_impl()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 808, in _prepare_impl
+    self.session.flush()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3363, in flush
+    self._flush(objects)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3503, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py", line 70, in __exit__
+    compat.raise_(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/orm/session.py", line 3463, in _flush
+    flush_context.execute()
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 456, in execute
+    rec.execute(self)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py", line 630, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 244, in save_obj
+    _emit_insert_statements(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py", line 1221, in _emit_insert_statements
+    result = connection._execute_20(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1614, in _execute_20
+    return meth(self, args_10style, kwargs_10style, execution_options)
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/sql/elements.py", line 325, in _execute_on_connection
+    return connection._execute_clauseelement(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1481, in _execute_clauseelement
+    ret = self._execute_context(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1708, in _execute_context
+    self._handle_dbapi_exception(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 2026, in _handle_dbapi_exception
+    util.raise_(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/util/compat.py", line 207, in raise_
+    raise exception
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1702, in _execute_context
+    context = constructor(
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 1070, in _init_compiled
+    param = [
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 1071, in <listcomp>
+    processors[key](compiled_params[key])
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/dialects/sqlite/base.py", line 1003, in process
+    raise TypeError(
+sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
+[SQL: INSERT INTO course (course, timestamp, building, user_id) VALUES (?, ?, ?, ?)]
+[parameters: [{'building': 'SCI 101', 'timestamp': datetime.time(16, 30), 'course': 'aaaa', 'user_id': 1}]]
+2022-01-22 11:39:41,735 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]

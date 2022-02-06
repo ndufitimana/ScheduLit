@@ -1,20 +1,4 @@
-2022-01-16 15:59:05,671 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 16:02:09,263 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 16:02:19,792 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 16:03:49,001 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 16:04:30,248 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 16:12:58,458 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 16:13:32,915 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 18:08:24,685 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 18:11:10,803 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 18:18:48,030 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-16 18:20:22,634 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/myapp/app/__init__.py:47]
-2022-01-22 10:54:02,285 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
-2022-01-22 10:54:23,616 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
-2022-01-22 10:56:02,232 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
-2022-01-22 10:56:36,021 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
-2022-01-22 10:57:11,600 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
-2022-01-22 10:57:58,394 ERROR: Exception on /add [POST] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1457]
+2022-01-22 11:40:18,224 ERROR: Exception on /add [POST] [in /Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/flask/app.py:1457]
 Traceback (most recent call last):
   File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/base.py", line 1702, in _execute_context
     context = constructor(
@@ -22,6 +6,8 @@ Traceback (most recent call last):
     param = [
   File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 1071, in <listcomp>
     processors[key](compiled_params[key])
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/sql/type_api.py", line 1631, in process
+    return impl_processor(process_param(value, dialect))
   File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/dialects/sqlite/base.py", line 1003, in process
     raise TypeError(
 TypeError: SQLite DateTime type only accepts Python datetime and date objects as input.
@@ -84,9 +70,11 @@ Traceback (most recent call last):
     param = [
   File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/engine/default.py", line 1071, in <listcomp>
     processors[key](compiled_params[key])
+  File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/sql/type_api.py", line 1631, in process
+    return impl_processor(process_param(value, dialect))
   File "/Library/Frameworks/Python.framework/Versions/3.9/lib/python3.9/site-packages/sqlalchemy/dialects/sqlite/base.py", line 1003, in process
     raise TypeError(
 sqlalchemy.exc.StatementError: (builtins.TypeError) SQLite DateTime type only accepts Python datetime and date objects as input.
 [SQL: INSERT INTO course (course, timestamp, building, user_id) VALUES (?, ?, ?, ?)]
-[parameters: [{'building': 'SCI 101', 'timestamp': datetime.time(16, 30), 'course': 'aaaa', 'user_id': 1}]]
-2022-01-22 11:39:41,735 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
+[parameters: [{'timestamp': datetime.time(23, 30), 'user_id': 1, 'building': 'SCI 101', 'course': 'Econo'}]]
+2022-01-22 11:42:21,621 INFO: courseScheduler startup [in /Users/ndufitimana/Desktop/ScheduLit/app/__init__.py:47]
