@@ -3,8 +3,7 @@ from app import db
 from app.main.forms import addCourseForm, DeleteProfileForm, EmptyForm, EditProfileForm
 from flask import render_template, flash, redirect, url_for, request
 from app.models import User, Course
-from flask_login import current_user, login_user, logout_user, login_required
-from werkzeug.urls import url_parse
+from flask_login import current_user, logout_user, login_required
 from datetime import datetime
 from app.main import bp
 
